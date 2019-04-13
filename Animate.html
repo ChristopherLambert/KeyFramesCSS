@@ -1,0 +1,118 @@
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Animate KayFrams</title>
+    <meta name="viewport" content="width=device-width">
+
+
+    <style>
+        @keyframes MoveQuadrado {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        @keyframes MoveQuadrado2 {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 600px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 600px;
+                top: 600px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 600px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .circulo1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            background-color: red;
+            animation: MoveQuadrado 4s infinite;
+        }
+
+        .circulo2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            background-color: red;
+            animation: MoveQuadrado2 4s infinite;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="circulo1" id="circulo"></div>
+
+    <script>
+        $(document).click(function () {
+            if($("#circulo").hasClass('circulo1')){
+
+                $("#circulo").removeClass('circulo1');
+                $("#circulo").addClass('circulo2');
+            }else{
+                $("#circulo").removeClass('circulo2');
+                $("#circulo").addClass('circulo1');
+            }
+            
+        });
+    </script>
+</body>
+
+</html>
